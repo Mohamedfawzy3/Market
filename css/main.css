@@ -1,5 +1,6 @@
 :root {
-  --main-color: rgb(71 46 202);
+  /* --main-color: rgb(71 46 202); */
+  --main-color:#58a3da;
   --bg: #f2f2f2;
 }
 * {
@@ -19,6 +20,17 @@ ul {
 }
 .section-header h3{
     color: var(--main-color);
+    position: relative;
+
+}
+.section-header h3::after{
+  content: "";
+  height: 110%;
+  height: 30px;
+  background-color: #ff6600;
+  /* position: absolute;
+  bottom: 0px;
+  right: 0px; */
 }
 /* ========== */
 /* the nav style */
@@ -73,4 +85,31 @@ nav .nav-content .controls .cart .orders-num {
 }
 .categraies .category-title{
     color: var(--main-color);
+
+}
+/* All Products */
+.card{
+  flex-basis: calc((100% - 80px) / 5);
+  
+}
+
+.card-img-box{
+  height: 180px;
+  text-align: center;
+  line-height: 150px;
+}
+.card-img-box img{
+  display: inline-block;
+  width: 100px;
+  height: 150px;
+ object-fit: contain;
+ aspect-ratio: 1/1;
+}
+.card .addToCart{
+
+}
+.card .addToCart input{
+ outline: none;
+border: 1px solid #ddd;
+   width: 50px; 
 }

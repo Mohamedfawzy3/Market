@@ -28,3 +28,10 @@ function getPrevious() {
   index == 0 ? (index = sliderImages.length - 1) : index--;
   sliderImg.src = sliderImages[index];
 }
+// wish list
+function wishList(el){
+  el.classList.toggle("animate")
+  el.classList.toggle("inactive")
+  el.classList.toggle("active")
+console.log(el)
+}
