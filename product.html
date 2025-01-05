@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <link rel="stylesheet" href="./css/whishList.css" />
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-6.7.2-web/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC+Guides&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/togle_menu.css">
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/productDetails.css" />
+  </head>
+  <body class="product_details_page">
+    <!-- navbar -->
+    <nav class="py-2  position-relative">
+      <div class="container d-flex justify-content-between align-items-center">
+          <div class="logo rounded-3">
+              <img src="./images/logo-white.png" alt="LOGO" title="logo" />
+          </div>
+          <div class="nav-content col-8 d-flex gap-5 justify-content-end align-items-center  flex-column flex-sm-row p-2 d-none d-sm-flex">
+              <div class="links ">
+                  <ul class="d-flex m-0 fw-sm-bold flex-column flex-sm-row p-0 text-center">
+                      <li class="p-1 m-0 me-sm-2 border-bottom border-1"><a href="./index.html">Home</a></li>
+                      <li class="p-1 m-0 me-sm-2 border-bottom border-1">About</li>
+                      <li class="p-1 m-0 me-sm-2 border-bottom border-1">Contct us</li>
+                      <li class="p-1 m-0 me-sm-2 border-bottom border-1">Blog</li>
+                  </ul>
+              </div>
+              <div class="controls d-flex align-items-center">
+                  <div class="cart position-relative me-3">
+                      <i class="fa-solid fa-basket-shopping"></i>
+                      <span class="orders-num position-absolute text-center text-white rounded-circle">4</span>
+                  </div>
+                  <span class="user text-secondary">Mohamed</span>
+                  <button class="btn btn-outline-danger  ms-4 btn-sm">
+                      Log out
+                  </button>
+              </div>
+        
+          </div>
+          <div class="togle-menu d-block d-sm-none text-danger ">
+              <button class="menu"
+                  onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+                  aria-label="Main Menu">
+                  <svg width="50" height="50" viewBox="0 0 100 100">
+                      <path class="line line1"
+                          d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                      <path class="line line2" d="M 20,50 H 80" />
+                      <path class="line line3"
+                          d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                  </svg>
+              </button>
+          </div>
+      </div>
+  </nav>
+    <!-- main content -->
+    <main class="py-3">
+      <div class="product-in-details container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-5 d-flex gap-3 product-images ">
+            <div class="sub-images ">
+                <div class="mb-2 active-img">
+                   <img
+                   class="w-100 h-100"
+                   src="./images/products/ماي-اتشويس-دلو-غبار107.webp"
+                   alt=""
+                 />
+                </div>
+                <div class="mb-2">
+                   <img
+                   class="w-100 h-100"
+                   src="./images/products/ماي-اتشويس-دلو-غبار107.webp"
+                   alt=""
+                 />
+                </div>
+                <div>
+                   <img
+                   class="w-100 h-100"
+                   src="./images/products/ماي-اتشويس-دلو-غبار107.webp"
+                   alt=""
+                 />
+                </div>
+               </div>
+            <div class="main-image w-100 text-center ">
+              <img
+                class=""
+                src="./images/products/ماي-اتشويس-دلو-غبار107.webp"
+                alt=""
+              />
+            </div>
+          
+          </div>
+          <div class="col-12 col-md-6 col-lg-7 description">
+            <h4 class="product-name mb-4 text-primary ">
+              
+                <span>></span>Bapia Premium Moisturizing Tissues, Multi-Pack, 3 Layers
+             
+             
+            </h4>
+            <div class="d-flex gap-5 align-items-center mb-3">
+              <div class="fs-4"><span class="price me-2  fw-bold">200</span><span>LE</span> <span class="muted-price text-muted text-decoration-line-through ms-3">233</span></div>
+              <div class="badge-rate rounded-2 bg-white shadow-sm p-1">
+                <i class="fa-solid fa-star star text-warning"></i>
+                <span class="rate ms-2">4.8</span>
+              </div>
+            </div>
+
+            <div class="d-flex addToCart gap-2">
+              <input
+                class="d-inline-block px-2 rounded-2"
+                type="number"
+                step="1"
+                min="1"
+                value="1"
+              />
+              <button class="btn btn-outline-primary">Add to cart</button>
+
+              <div class="badge-rate rounded-2 bg-white shadow-sm p-1">
+                <button
+                  class="button border-0 btn-wishlist d-flex justify-content-center align-items-center rounded"
+                  onclick="wishList(this)"
+                  aria-label="Add to wishlist"
+                >
+                  <div class="btn__effect">
+                    <svg
+                      class="heart-stroke icon-svg icon-svg--size-4 icon-svg--color-silver"
+                      viewBox="20 18 29 28"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path
+                        d="M28.3 21.1a4.3 4.3 0 0 1 4.1 2.6 2.5 2.5 0 0 0 2.3 1.7c1 0 1.7-.6 2.2-1.7a3.7 3.7 0 0 1 3.7-2.6c2.7 0 5.2 2.7 5.3 5.8.2 4-5.4 11.2-9.3 15a2.8 2.8 0 0 1-2 1 3.4 3.4 0 0 1-2.2-1c-9.6-10-9.4-13.2-9.3-15 0-1 .6-5.8 5.2-5.8m0-3c-5.3 0-7.9 4.3-8.2 8.5-.2 3.2.4 7.2 10.2 17.4a6.3 6.3 0 0 0 4.3 1.9 5.7 5.7 0 0 0 4.1-1.9c1.1-1 10.6-10.7 10.3-17.3-.2-4.6-4-8.6-8.4-8.6a7.6 7.6 0 0 0-6 2.7 8.1 8.1 0 0 0-6.2-2.7z"
+                      ></path>
+                    </svg>
+                    <svg
+                      class="heart-full icon-svg icon-svg--size-4 icon-svg--color-blue"
+                      viewBox="0 0 19.2 18.5"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path
+                        d="M9.66 18.48a4.23 4.23 0 0 1-2.89-1.22C.29 10.44-.12 7.79.02 5.67.21 2.87 1.95.03 5.42.01c1.61-.07 3.16.57 4.25 1.76A5.07 5.07 0 0 1 13.6 0c2.88 0 5.43 2.66 5.59 5.74.2 4.37-6.09 10.79-6.8 11.5-.71.77-1.7 1.21-2.74 1.23z"
+                      ></path>
+                    </svg>
+                    <svg
+                      class="broken-heart"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="48"
+                      height="16"
+                      viewBox="5.707 17 48 16"
+                    >
+                      <g fill="#A98F43">
+                        <path
+                          class="broken-heart--left"
+                          d="M29.865 32.735V18.703a4.562 4.562 0 0 0-3.567-1.476c-2.916.017-4.378 2.403-4.538 4.756-.118 1.781.227 4.006 5.672 9.737a3.544 3.544 0 0 0 2.428 1.025l-.008-.008.013-.002z"
+                        ></path>
+                        <path
+                          class="broken-heart--right"
+                          d="M37.868 22.045c-.135-2.588-2.277-4.823-4.697-4.823a4.258 4.258 0 0 0-3.302 1.487l-.004-.003v14.035a3.215 3.215 0 0 0 2.289-1.033c.598-.596 5.882-5.99 5.714-9.663z"
+                        ></path>
+                      </g>
+                      <path
+                        class="broken-heart--crack"
+                        fill="none"
+                        stroke="#FFF"
+                        stroke-miterlimit="10"
+                        d="M29.865 18.205v14.573"
+                      ></path>
+                    </svg>
+                    <div class="effect-group">
+                      <span class="effect"></span>
+                      <span class="effect"></span>
+                      <span class="effect"></span>
+                      <span class="effect"></span>
+                      <span class="effect"></span>
+                    </div>
+                  </div>
+                </button>
+                <span>Favorite</span>
+              </div>
+            </div>
+            <div class="sell-info border border-light shadow-sm container py-2 mt-3 rounded-3 ">
+                <p class="d-flex gap-3 align-items-center p-1"><i class="fa-solid fa-truck Delivery-icon text-warning"></i><span>Delivery within two days | Fast and reliable parcel delivery!</span></p>
+                <p class="d-flex gap-3 align-items-center p-1"><i class="fa-solid fa-money-bill text-warning "></i><span>Cash on delivery</span></p>
+                <p class="d-flex gap-3 align-items-center p-1"><i class="fa-solid fa-rotate-left text-warning"></i><span>Two days for returns and free delivery</span></p>
+                <p class="d-flex gap-3 align-items-center p-1"><i class="fa-solid fa-lock text-warning"></i><span>Your data is secure</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <script src="./fontawesome-free-6.7.2-web/js/all.min.js"></script>
+    <script src="./js/nav.js"></script>
+    <script  src="./js/product_details.js"></script>
+  </body>
+</html>

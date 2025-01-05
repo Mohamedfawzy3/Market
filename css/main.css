@@ -2,17 +2,24 @@
   /* --main-color: rgb(71 46 202); */
   --main-color:#58a3da;
   --bg: #f2f2f2;
+  --second-color: #636262;
+  --section-header-font: "Playwrite AU VIC Guides", serif
 }
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
-html {
+* {
   font-family: "Poppins", serif;
+ 
 }
 ul {
   list-style: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
 }
 /* ========== */
 .section-header{
@@ -21,7 +28,7 @@ ul {
 .section-header h3{
     color: var(--main-color);
     position: relative;
-
+font-family: var(--section-header-font);
 }
 .section-header h3::after{
   content: "";
@@ -48,6 +55,22 @@ nav .logo img {
 .links {
   color: var(--main-color);
   font-size: 18px;
+}
+nav .nav-content{
+  
+}
+
+@media (max-width: 576px) {
+  nav .nav-content{
+    background-color:var(--bg);
+    position: absolute;
+    top:calc(100% + 2px);
+    left: 0px;
+    width: 100%;
+    z-index: 30;
+  }nav .nav-content .links{
+  width: 100%;
+  }
 }
 nav .nav-content .controls .cart {
 }
@@ -89,8 +112,8 @@ nav .nav-content .controls .cart .orders-num {
 }
 /* All Products */
 .card{
-  flex-basis: calc((100% - 80px) / 5);
-  
+  /* flex-basis: calc((100% - 80px) / 5);
+   */
 }
 
 .card-img-box{
@@ -105,11 +128,14 @@ nav .nav-content .controls .cart .orders-num {
  object-fit: contain;
  aspect-ratio: 1/1;
 }
+.card .product-name{
+  color: var(--second-color);
+}
 .card .addToCart{
 
 }
-.card .addToCart input{
+.addToCart input{
  outline: none;
 border: 1px solid #ddd;
-   width: 50px; 
+   width: 55px; 
 }

@@ -19,42 +19,55 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC+Guides&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/togle_menu.css">
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="py-2">
+    <nav class="py-2  position-relative">
       <div class="container d-flex justify-content-between align-items-center">
-        <div class="logo rounded-3">
-          <img src="./images/logo-white.png" alt="LOGO" title="logo" />
-        </div>
-        <div
-          class="nav-content col-6 d-flex justify-content-between align-items-center"
-        >
-          <div class="links">
-            <ul class="d-flex m-0 fw-bolder">
-              <li class="p-1 me-2">Home</li>
-              <li class="p-1 me-2">About</li>
-              <li class="p-1 me-2">Contct us</li>
-              <li class="p-1 me-2">Blog</li>
-            </ul>
+          <div class="logo rounded-3">
+              <img src="./images/logo-white.png" alt="LOGO" title="logo" />
           </div>
-          <div class="controls d-flex align-items-center">
-            <div class="cart position-relative me-3">
-              <i class="fa-solid fa-basket-shopping"></i>
-              <span
-                class="orders-num position-absolute text-center text-white rounded-circle"
-                >4</span
-              >
-            </div>
-            <span class="user text-secondary">Mohamed</span>
-            <button class="btn border-1 border-danger text-danger ms-4">
-              Log out
-            </button>
+          <div class="nav-content col-8 d-flex gap-5 justify-content-end align-items-center  flex-column flex-sm-row p-2 d-none d-sm-flex">
+              <div class="links ">
+                  <ul class="d-flex m-0 fw-sm-bold flex-column flex-sm-row p-0 text-center">
+                      <li class="p-1 m-0 me-sm-2 border-bottom border-1"><a href="./index.html">Home</a></li>
+                      <li class="p-1 m-0 me-sm-2 border-bottom border-1">About</li>
+                      <li class="p-1 m-0 me-sm-2 border-bottom border-1">Contct us</li>
+                      <li class="p-1 m-0 me-sm-2 border-bottom border-1">Blog</li>
+                  </ul>
+              </div>
+              <div class="controls d-flex align-items-center">
+                  <div class="cart position-relative me-3" onclick="(location.href='./cart.html')">
+                      <i class="fa-solid fa-basket-shopping"></i>
+                      <span class="orders-num position-absolute text-center text-white rounded-circle">4</span>
+                  </div>
+                  <span class="user text-secondary">Mohamed</span>
+                  <button class="btn btn-outline-danger  ms-4 btn-sm">
+                      Log out
+                  </button>
+              </div>
+        
           </div>
-        </div>
+          <div class="togle-menu d-block d-sm-none text-danger ">
+              <button class="menu"
+                  onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+                  aria-label="Main Menu">
+                  <svg width="50" height="50" viewBox="0 0 100 100">
+                      <path class="line line1"
+                          d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                      <path class="line line2" d="M 20,50 H 80" />
+                      <path class="line line3"
+                          d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                  </svg>
+              </button>
+          </div>
       </div>
-    </nav>
+  </nav>
     <!-- slider -->
     <section class="slider position-relative">
       <div class="w-100 h-100">
@@ -73,6 +86,7 @@
         >
           <i class="fa-solid fa-chevron-right"></i>
         </div>
+        
       </div>
     </section>
 <!-- categraies -->
@@ -80,32 +94,32 @@
     <div class="section-header text-center mb-4">
         <h3 class="fw-bold">Our categraies</h3>
     </div>
-<main class="container d-flex gap-2 ">
-    <div class="w-100 text-center">
+<main class="container row flex-wrap">
+    <div class=" text-center col-12 col-sm-4 col-md-3">
         <div class="categorye-img">
             <img class="rounded-circle" src="./images/library-tools-category.webp" alt="library">
         </div>
         <div class="mt-3 fs-3 fw-medium category-title">library tools</div>
     </div>
-    <div class="w-100 text-center">
+    <div class=" text-center col-12 col-sm-4 col-md-3">
         <div class="categorye-img">
             <img class="rounded-circle" src="./images/drinks -categoery.webp" alt="drinks">
         </div>
         <div class="mt-3 fs-3 fw-medium category-title">drinks</div>
     </div>
-    <div class="w-100 text-center">
+    <div class=" text-center col-12 col-sm-4 col-md-3">
         <div class="categorye-img">
             <img class="rounded-circle" src="./images/detol categoery.webp" alt="cleaning">
         </div>
         <div class="mt-3 fs-3 fw-medium category-title">cleaning</div>
     </div>
-    <div class="w-100 text-center">
+    <div class=" text-center col-12 col-sm-4 col-md-3">
         <div class="categorye-img">
             <img class="rounded-circle" src="./images/computer-categoery.webp" alt="comuoters-categories">
         </div>
         <div class="mt-3 fs-3 fw-medium category-title">computers</div>
     </div>
-    <div class="w-100 text-center">
+    <div class=" text-center col-12 col-sm-4 col-md-3">
         <div class="categorye-img">
             <img class="rounded-circle" src="./images/mobile-categorey.webp" alt="mobiles-categories">
         </div>
@@ -120,507 +134,61 @@
       
   </div>
     <div class="container">
-    <div class="d-flex flex-wrap gap-3">
-      <div class="card col-sm-5 border-0 shadow-sm bg-light-subtle ">
-       <div class="card-img-box p-2 m-2 bg-light">
-       <a href="#"> <img src="./images/products/0dbc84f20c1c6673ed56eb6a46b4e869.webp" class="card-img-top" alt="..."></a>
-       </div>
-        <div class="card-body pt-1 ">
-         <div class="d-flex justify-content-between">
-          <button class="button border-0 btn-wishlist d-flex justify-content-center align-items-center rounded shadow-sm " onclick="wishList(this)" aria-label="Add to wishlist">
-            <div class="btn__effect">
-                <svg class="heart-stroke icon-svg icon-svg--size-4 icon-svg--color-silver" viewBox="20 18 29 28" aria-hidden="true" focusable="false">
-                    <path d="M28.3 21.1a4.3 4.3 0 0 1 4.1 2.6 2.5 2.5 0 0 0 2.3 1.7c1 0 1.7-.6 2.2-1.7a3.7 3.7 0 0 1 3.7-2.6c2.7 0 5.2 2.7 5.3 5.8.2 4-5.4 11.2-9.3 15a2.8 2.8 0 0 1-2 1 3.4 3.4 0 0 1-2.2-1c-9.6-10-9.4-13.2-9.3-15 0-1 .6-5.8 5.2-5.8m0-3c-5.3 0-7.9 4.3-8.2 8.5-.2 3.2.4 7.2 10.2 17.4a6.3 6.3 0 0 0 4.3 1.9 5.7 5.7 0 0 0 4.1-1.9c1.1-1 10.6-10.7 10.3-17.3-.2-4.6-4-8.6-8.4-8.6a7.6 7.6 0 0 0-6 2.7 8.1 8.1 0 0 0-6.2-2.7z">
-                    </path>
-                </svg>
-                <svg class="heart-full icon-svg icon-svg--size-4 icon-svg--color-blue" viewBox="0 0 19.2 18.5" aria-hidden="true" focusable="false">
-                    <path d="M9.66 18.48a4.23 4.23 0 0 1-2.89-1.22C.29 10.44-.12 7.79.02 5.67.21 2.87 1.95.03 5.42.01c1.61-.07 3.16.57 4.25 1.76A5.07 5.07 0 0 1 13.6 0c2.88 0 5.43 2.66 5.59 5.74.2 4.37-6.09 10.79-6.8 11.5-.71.77-1.7 1.21-2.74 1.23z">
-                    </path>
-                </svg>
-                <svg class="broken-heart" xmlns="http://www.w3.org/2000/svg" width="48" height="16" viewBox="5.707 17 48 16">
-                    <g fill="#A98F43">
-                        <path class="broken-heart--left" d="M29.865 32.735V18.703a4.562 4.562 0 0 0-3.567-1.476c-2.916.017-4.378 2.403-4.538 4.756-.118 1.781.227 4.006 5.672 9.737a3.544 3.544 0 0 0 2.428 1.025l-.008-.008.013-.002z"></path>
-                        <path class="broken-heart--right" d="M37.868 22.045c-.135-2.588-2.277-4.823-4.697-4.823a4.258 4.258 0 0 0-3.302 1.487l-.004-.003v14.035a3.215 3.215 0 0 0 2.289-1.033c.598-.596 5.882-5.99 5.714-9.663z"></path>
-                    </g>
-                    <path class="broken-heart--crack" fill="none" stroke="#FFF" stroke-miterlimit="10" d="M29.865 18.205v14.573"></path>
-                </svg>
-                <div class="effect-group">
-                    <span class="effect"></span>
-                    <span class="effect"></span>
-                    <span class="effect"></span>
-                    <span class="effect"></span>
-                    <span class="effect"></span>
-                </div>
+      <div class="d-flex flex-wrap gap-3  products-container" >
+        
+          <div class="card col-sm-5 border-0 shadow-sm ">
+            <div class="card-img-box p-2 m-2 bg-light">
+            <a href="#"> <img src="./images/products/b12ae351b4836e8644abd2c361f3d3fa.webp" class="card-img-top" alt="..."></a>
             </div>
-          
-        </button>
-        <div class="badge-rate rounded-2 bg-white shadow-sm p-1">
-          <i class="fa-solid fa-star star text-warning"></i>
-          
-          <span class="ms-2">4.8</span>
-        </div>
-         </div>
-          
-          <p class="card-text my-2 lh-sm">Some quick example</p>
-          <p class="card-text mb-3"><span class="price me-2">100</span> LE <span class="text-muted text-decoration-line-through ms-3">250</span></p>
-          <div class="d-flex addToCart gap-2">
-            <input class="d-inline-block px-2  rounded-2 " type="number" step="1" min="1" value="1">
-            <button class="w-100 btn btn-outline-primary">Add to cart</button>
-          </div>
-        </div>
-      </div>
-      <div class="card col-sm-5 border-0 shadow-sm bg-light-subtle">
-        <div class="card-img-box p-2 m-2 bg-light">
-        <a href="#"> <img src="./images/products/كرتونة-ورق-طباعه-مرام-5-عبوات-70-جم322.webp" class="card-img-top" alt="..."></a>
-        </div>
-         <div class="card-body pt-1 ">
-          <div class="d-flex justify-content-between">
-           <button class="button border-0 btn-wishlist d-flex justify-content-center align-items-center rounded shadow-sm " onclick="wishList(this)" aria-label="Add to wishlist">
-             <div class="btn__effect">
-                 <svg class="heart-stroke icon-svg icon-svg--size-4 icon-svg--color-silver" viewBox="20 18 29 28" aria-hidden="true" focusable="false">
-                     <path d="M28.3 21.1a4.3 4.3 0 0 1 4.1 2.6 2.5 2.5 0 0 0 2.3 1.7c1 0 1.7-.6 2.2-1.7a3.7 3.7 0 0 1 3.7-2.6c2.7 0 5.2 2.7 5.3 5.8.2 4-5.4 11.2-9.3 15a2.8 2.8 0 0 1-2 1 3.4 3.4 0 0 1-2.2-1c-9.6-10-9.4-13.2-9.3-15 0-1 .6-5.8 5.2-5.8m0-3c-5.3 0-7.9 4.3-8.2 8.5-.2 3.2.4 7.2 10.2 17.4a6.3 6.3 0 0 0 4.3 1.9 5.7 5.7 0 0 0 4.1-1.9c1.1-1 10.6-10.7 10.3-17.3-.2-4.6-4-8.6-8.4-8.6a7.6 7.6 0 0 0-6 2.7 8.1 8.1 0 0 0-6.2-2.7z">
-                     </path>
-                 </svg>
-                 <svg class="heart-full icon-svg icon-svg--size-4 icon-svg--color-blue" viewBox="0 0 19.2 18.5" aria-hidden="true" focusable="false">
-                     <path d="M9.66 18.48a4.23 4.23 0 0 1-2.89-1.22C.29 10.44-.12 7.79.02 5.67.21 2.87 1.95.03 5.42.01c1.61-.07 3.16.57 4.25 1.76A5.07 5.07 0 0 1 13.6 0c2.88 0 5.43 2.66 5.59 5.74.2 4.37-6.09 10.79-6.8 11.5-.71.77-1.7 1.21-2.74 1.23z">
-                     </path>
-                 </svg>
-                 <svg class="broken-heart" xmlns="http://www.w3.org/2000/svg" width="48" height="16" viewBox="5.707 17 48 16">
-                     <g fill="#A98F43">
-                         <path class="broken-heart--left" d="M29.865 32.735V18.703a4.562 4.562 0 0 0-3.567-1.476c-2.916.017-4.378 2.403-4.538 4.756-.118 1.781.227 4.006 5.672 9.737a3.544 3.544 0 0 0 2.428 1.025l-.008-.008.013-.002z"></path>
-                         <path class="broken-heart--right" d="M37.868 22.045c-.135-2.588-2.277-4.823-4.697-4.823a4.258 4.258 0 0 0-3.302 1.487l-.004-.003v14.035a3.215 3.215 0 0 0 2.289-1.033c.598-.596 5.882-5.99 5.714-9.663z"></path>
-                     </g>
-                     <path class="broken-heart--crack" fill="none" stroke="#FFF" stroke-miterlimit="10" d="M29.865 18.205v14.573"></path>
-                 </svg>
-                 <div class="effect-group">
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
+             <div class="card-body pt-1">
+              <div class="d-flex justify-content-between">
+               <button class="button border-0 btn-wishlist d-flex justify-content-center align-items-center rounded shadow-sm " onclick="wishList(this)" aria-label="Add to wishlist">
+                 <div class="btn__effect">
+                     <svg class="heart-stroke icon-svg icon-svg--size-4 icon-svg--color-silver" viewBox="20 18 29 28" aria-hidden="true" focusable="false">
+                         <path d="M28.3 21.1a4.3 4.3 0 0 1 4.1 2.6 2.5 2.5 0 0 0 2.3 1.7c1 0 1.7-.6 2.2-1.7a3.7 3.7 0 0 1 3.7-2.6c2.7 0 5.2 2.7 5.3 5.8.2 4-5.4 11.2-9.3 15a2.8 2.8 0 0 1-2 1 3.4 3.4 0 0 1-2.2-1c-9.6-10-9.4-13.2-9.3-15 0-1 .6-5.8 5.2-5.8m0-3c-5.3 0-7.9 4.3-8.2 8.5-.2 3.2.4 7.2 10.2 17.4a6.3 6.3 0 0 0 4.3 1.9 5.7 5.7 0 0 0 4.1-1.9c1.1-1 10.6-10.7 10.3-17.3-.2-4.6-4-8.6-8.4-8.6a7.6 7.6 0 0 0-6 2.7 8.1 8.1 0 0 0-6.2-2.7z">
+                         </path>
+                     </svg>
+                     <svg class="heart-full icon-svg icon-svg--size-4 icon-svg--color-blue" viewBox="0 0 19.2 18.5" aria-hidden="true" focusable="false">
+                         <path d="M9.66 18.48a4.23 4.23 0 0 1-2.89-1.22C.29 10.44-.12 7.79.02 5.67.21 2.87 1.95.03 5.42.01c1.61-.07 3.16.57 4.25 1.76A5.07 5.07 0 0 1 13.6 0c2.88 0 5.43 2.66 5.59 5.74.2 4.37-6.09 10.79-6.8 11.5-.71.77-1.7 1.21-2.74 1.23z">
+                         </path>
+                     </svg>
+                     <svg class="broken-heart" xmlns="http://www.w3.org/2000/svg" width="48" height="16" viewBox="5.707 17 48 16">
+                         <g fill="#A98F43">
+                             <path class="broken-heart--left" d="M29.865 32.735V18.703a4.562 4.562 0 0 0-3.567-1.476c-2.916.017-4.378 2.403-4.538 4.756-.118 1.781.227 4.006 5.672 9.737a3.544 3.544 0 0 0 2.428 1.025l-.008-.008.013-.002z"></path>
+                             <path class="broken-heart--right" d="M37.868 22.045c-.135-2.588-2.277-4.823-4.697-4.823a4.258 4.258 0 0 0-3.302 1.487l-.004-.003v14.035a3.215 3.215 0 0 0 2.289-1.033c.598-.596 5.882-5.99 5.714-9.663z"></path>
+                         </g>
+                         <path class="broken-heart--crack" fill="none" stroke="#FFF" stroke-miterlimit="10" d="M29.865 18.205v14.573"></path>
+                     </svg>
+                     <div class="effect-group">
+                         <span class="effect"></span>
+                         <span class="effect"></span>
+                         <span class="effect"></span>
+                         <span class="effect"></span>
+                         <span class="effect"></span>
+                     </div>
                  </div>
+               
+             </button>
+             <div class="badge-rate rounded-2 bg-white shadow-sm p-1">
+               <i class="fa-solid fa-star star text-warning"></i>
+               <span class="ms-2">4.8</span>
              </div>
-           
-         </button>
-         <div class="badge-rate rounded-2 bg-white shadow-sm p-1">
-           <i class="fa-solid fa-star star text-warning"></i>
-           <span class="ms-2">4.8</span>
-         </div>
-          </div>
-           
-           <p class="card-text my-2 lh-sm">Some quick example for </p>
-           <p class="card-text mb-3"><span class="price">100</span> LE</p>
-           <div class="d-flex addToCart gap-2">
-             <input class="d-inline-block px-2  rounded-2 " type="number" step="1" min="1" value="1">
-             <button class="w-100 btn btn-outline-primary">Add to cart</button>
-           </div>
-         </div>
-       </div>
-       <div class="card col-sm-5 border-0 shadow-sm bg-light-subtle">
-        <div class="card-img-box p-2 m-2 bg-light">
-        <a href="#"> <img src="./images/products/كرتونة-ورق-طباعة-شيمكس-5-عبوات-75جم323.webp" class="card-img-top" alt="..."></a>
-        </div>
-         <div class="card-body pt-1 ">
-          <div class="d-flex justify-content-between">
-           <button class="button border-0 btn-wishlist d-flex justify-content-center align-items-center rounded shadow-sm " onclick="wishList(this)" aria-label="Add to wishlist">
-             <div class="btn__effect">
-                 <svg class="heart-stroke icon-svg icon-svg--size-4 icon-svg--color-silver" viewBox="20 18 29 28" aria-hidden="true" focusable="false">
-                     <path d="M28.3 21.1a4.3 4.3 0 0 1 4.1 2.6 2.5 2.5 0 0 0 2.3 1.7c1 0 1.7-.6 2.2-1.7a3.7 3.7 0 0 1 3.7-2.6c2.7 0 5.2 2.7 5.3 5.8.2 4-5.4 11.2-9.3 15a2.8 2.8 0 0 1-2 1 3.4 3.4 0 0 1-2.2-1c-9.6-10-9.4-13.2-9.3-15 0-1 .6-5.8 5.2-5.8m0-3c-5.3 0-7.9 4.3-8.2 8.5-.2 3.2.4 7.2 10.2 17.4a6.3 6.3 0 0 0 4.3 1.9 5.7 5.7 0 0 0 4.1-1.9c1.1-1 10.6-10.7 10.3-17.3-.2-4.6-4-8.6-8.4-8.6a7.6 7.6 0 0 0-6 2.7 8.1 8.1 0 0 0-6.2-2.7z">
-                     </path>
-                 </svg>
-                 <svg class="heart-full icon-svg icon-svg--size-4 icon-svg--color-blue" viewBox="0 0 19.2 18.5" aria-hidden="true" focusable="false">
-                     <path d="M9.66 18.48a4.23 4.23 0 0 1-2.89-1.22C.29 10.44-.12 7.79.02 5.67.21 2.87 1.95.03 5.42.01c1.61-.07 3.16.57 4.25 1.76A5.07 5.07 0 0 1 13.6 0c2.88 0 5.43 2.66 5.59 5.74.2 4.37-6.09 10.79-6.8 11.5-.71.77-1.7 1.21-2.74 1.23z">
-                     </path>
-                 </svg>
-                 <svg class="broken-heart" xmlns="http://www.w3.org/2000/svg" width="48" height="16" viewBox="5.707 17 48 16">
-                     <g fill="#A98F43">
-                         <path class="broken-heart--left" d="M29.865 32.735V18.703a4.562 4.562 0 0 0-3.567-1.476c-2.916.017-4.378 2.403-4.538 4.756-.118 1.781.227 4.006 5.672 9.737a3.544 3.544 0 0 0 2.428 1.025l-.008-.008.013-.002z"></path>
-                         <path class="broken-heart--right" d="M37.868 22.045c-.135-2.588-2.277-4.823-4.697-4.823a4.258 4.258 0 0 0-3.302 1.487l-.004-.003v14.035a3.215 3.215 0 0 0 2.289-1.033c.598-.596 5.882-5.99 5.714-9.663z"></path>
-                     </g>
-                     <path class="broken-heart--crack" fill="none" stroke="#FFF" stroke-miterlimit="10" d="M29.865 18.205v14.573"></path>
-                 </svg>
-                 <div class="effect-group">
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                 </div>
+              </div>
+               
+               <p class="card-text my-2">Some quick example</p>
+               <p class="card-text mb-3"><span class="price fw-bold me-2">100</span> <span class="">L.E</span></p>
+               <div class="d-flex addToCart gap-2">
+                 <input class="d-inline-block px-2  rounded-2 " type="number" step="1" min="1" value="1">
+                 <button class="w-100 btn btn-outline-primary">Add to cart</button>
+               </div>
              </div>
-           
-         </button>
-         <div class="badge-rate rounded-2 bg-white shadow-sm p-1">
-           <i class="fa-solid fa-star star text-warning"></i>
-           <span class="ms-2">4.8</span>
-         </div>
-          </div>
-           
-           <p class="card-text my-2">Some quick example</p>
-           <p class="card-text mb-3"><span class="price">100</span> LE</p>
-           <div class="d-flex addToCart gap-2">
-             <input class="d-inline-block px-2  rounded-2 " type="number" step="1" min="1" value="1">
-             <button class="w-100 btn btn-outline-primary">Add to cart</button>
-           </div>
-         </div>
-       </div>
-      <div class="card col-sm-5 border-0 shadow-sm ">
-        <div class="card-img-box p-2 m-2 bg-light">
-        <a href="#"> <img src="./images/products/b12ae351b4836e8644abd2c361f3d3fa.webp" class="card-img-top" alt="..."></a>
-        </div>
-         <div class="card-body pt-1">
-          <div class="d-flex justify-content-between">
-           <button class="button border-0 btn-wishlist d-flex justify-content-center align-items-center rounded shadow-sm " onclick="wishList(this)" aria-label="Add to wishlist">
-             <div class="btn__effect">
-                 <svg class="heart-stroke icon-svg icon-svg--size-4 icon-svg--color-silver" viewBox="20 18 29 28" aria-hidden="true" focusable="false">
-                     <path d="M28.3 21.1a4.3 4.3 0 0 1 4.1 2.6 2.5 2.5 0 0 0 2.3 1.7c1 0 1.7-.6 2.2-1.7a3.7 3.7 0 0 1 3.7-2.6c2.7 0 5.2 2.7 5.3 5.8.2 4-5.4 11.2-9.3 15a2.8 2.8 0 0 1-2 1 3.4 3.4 0 0 1-2.2-1c-9.6-10-9.4-13.2-9.3-15 0-1 .6-5.8 5.2-5.8m0-3c-5.3 0-7.9 4.3-8.2 8.5-.2 3.2.4 7.2 10.2 17.4a6.3 6.3 0 0 0 4.3 1.9 5.7 5.7 0 0 0 4.1-1.9c1.1-1 10.6-10.7 10.3-17.3-.2-4.6-4-8.6-8.4-8.6a7.6 7.6 0 0 0-6 2.7 8.1 8.1 0 0 0-6.2-2.7z">
-                     </path>
-                 </svg>
-                 <svg class="heart-full icon-svg icon-svg--size-4 icon-svg--color-blue" viewBox="0 0 19.2 18.5" aria-hidden="true" focusable="false">
-                     <path d="M9.66 18.48a4.23 4.23 0 0 1-2.89-1.22C.29 10.44-.12 7.79.02 5.67.21 2.87 1.95.03 5.42.01c1.61-.07 3.16.57 4.25 1.76A5.07 5.07 0 0 1 13.6 0c2.88 0 5.43 2.66 5.59 5.74.2 4.37-6.09 10.79-6.8 11.5-.71.77-1.7 1.21-2.74 1.23z">
-                     </path>
-                 </svg>
-                 <svg class="broken-heart" xmlns="http://www.w3.org/2000/svg" width="48" height="16" viewBox="5.707 17 48 16">
-                     <g fill="#A98F43">
-                         <path class="broken-heart--left" d="M29.865 32.735V18.703a4.562 4.562 0 0 0-3.567-1.476c-2.916.017-4.378 2.403-4.538 4.756-.118 1.781.227 4.006 5.672 9.737a3.544 3.544 0 0 0 2.428 1.025l-.008-.008.013-.002z"></path>
-                         <path class="broken-heart--right" d="M37.868 22.045c-.135-2.588-2.277-4.823-4.697-4.823a4.258 4.258 0 0 0-3.302 1.487l-.004-.003v14.035a3.215 3.215 0 0 0 2.289-1.033c.598-.596 5.882-5.99 5.714-9.663z"></path>
-                     </g>
-                     <path class="broken-heart--crack" fill="none" stroke="#FFF" stroke-miterlimit="10" d="M29.865 18.205v14.573"></path>
-                 </svg>
-                 <div class="effect-group">
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                 </div>
-             </div>
-           
-         </button>
-         <div class="badge-rate rounded-2 bg-white shadow-sm p-1">
-           <i class="fa-solid fa-star star text-warning"></i>
-           <span class="ms-2">4.8</span>
-         </div>
-          </div>
-           
-           <p class="card-text my-2">Some quick example</p>
-           <p class="card-text mb-3"><span class="price fw-bold me-2">100</span> <span class="">L.E</span></p>
-           <div class="d-flex addToCart gap-2">
-             <input class="d-inline-block px-2  rounded-2 " type="number" step="1" min="1" value="1">
-             <button class="w-100 btn btn-outline-primary">Add to cart</button>
-           </div>
-         </div>
-       </div>
-       <div class="card col-sm-5 border-0 shadow-sm ">
-        <div class="card-img-box p-2 m-2 bg-light">
-        <a href="#"> <img src="./images/products/بابيا-مناديل-سحب-عبوة-متعددة-3-طبقات-بريميوم-مرطبة...230.webp" class="card-img-top" alt="..."></a>
-        </div>
-         <div class="card-body pt-1">
-          <div class="d-flex justify-content-between">
-           <button class="button border-0 btn-wishlist d-flex justify-content-center align-items-center rounded shadow-sm " onclick="wishList(this)" aria-label="Add to wishlist">
-             <div class="btn__effect">
-                 <svg class="heart-stroke icon-svg icon-svg--size-4 icon-svg--color-silver" viewBox="20 18 29 28" aria-hidden="true" focusable="false">
-                     <path d="M28.3 21.1a4.3 4.3 0 0 1 4.1 2.6 2.5 2.5 0 0 0 2.3 1.7c1 0 1.7-.6 2.2-1.7a3.7 3.7 0 0 1 3.7-2.6c2.7 0 5.2 2.7 5.3 5.8.2 4-5.4 11.2-9.3 15a2.8 2.8 0 0 1-2 1 3.4 3.4 0 0 1-2.2-1c-9.6-10-9.4-13.2-9.3-15 0-1 .6-5.8 5.2-5.8m0-3c-5.3 0-7.9 4.3-8.2 8.5-.2 3.2.4 7.2 10.2 17.4a6.3 6.3 0 0 0 4.3 1.9 5.7 5.7 0 0 0 4.1-1.9c1.1-1 10.6-10.7 10.3-17.3-.2-4.6-4-8.6-8.4-8.6a7.6 7.6 0 0 0-6 2.7 8.1 8.1 0 0 0-6.2-2.7z">
-                     </path>
-                 </svg>
-                 <svg class="heart-full icon-svg icon-svg--size-4 icon-svg--color-blue" viewBox="0 0 19.2 18.5" aria-hidden="true" focusable="false">
-                     <path d="M9.66 18.48a4.23 4.23 0 0 1-2.89-1.22C.29 10.44-.12 7.79.02 5.67.21 2.87 1.95.03 5.42.01c1.61-.07 3.16.57 4.25 1.76A5.07 5.07 0 0 1 13.6 0c2.88 0 5.43 2.66 5.59 5.74.2 4.37-6.09 10.79-6.8 11.5-.71.77-1.7 1.21-2.74 1.23z">
-                     </path>
-                 </svg>
-                 <svg class="broken-heart" xmlns="http://www.w3.org/2000/svg" width="48" height="16" viewBox="5.707 17 48 16">
-                     <g fill="#A98F43">
-                         <path class="broken-heart--left" d="M29.865 32.735V18.703a4.562 4.562 0 0 0-3.567-1.476c-2.916.017-4.378 2.403-4.538 4.756-.118 1.781.227 4.006 5.672 9.737a3.544 3.544 0 0 0 2.428 1.025l-.008-.008.013-.002z"></path>
-                         <path class="broken-heart--right" d="M37.868 22.045c-.135-2.588-2.277-4.823-4.697-4.823a4.258 4.258 0 0 0-3.302 1.487l-.004-.003v14.035a3.215 3.215 0 0 0 2.289-1.033c.598-.596 5.882-5.99 5.714-9.663z"></path>
-                     </g>
-                     <path class="broken-heart--crack" fill="none" stroke="#FFF" stroke-miterlimit="10" d="M29.865 18.205v14.573"></path>
-                 </svg>
-                 <div class="effect-group">
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                 </div>
-             </div>
-           
-         </button>
-         <div class="badge-rate rounded-2 bg-white shadow-sm p-1">
-           <i class="fa-solid fa-star star text-warning"></i>
-           <span class="ms-2">4.8</span>
-         </div>
-          </div>
-           
-           <p class="card-text my-2">Some quick example</p>
-           <p class="card-text mb-3"><span class="price">100</span> LE</p>
-           <div class="d-flex addToCart gap-2">
-             <input class="d-inline-block px-2  rounded-2 " type="number" step="1" min="1" value="1">
-             <button class="w-100 btn btn-outline-primary">Add to cart</button>
-           </div>
-         </div>
-       </div>
-       <div class="card col-sm-5 border-0 shadow-sm ">
-        <div class="card-img-box p-2 m-2 bg-light">
-        <a href="#"> <img src="./images/products/بلانشيطة-مفرد-رمسيس-جلد149.webp" class="card-img-top" alt="..."></a>
-        </div>
-         <div class="card-body pt-1">
-          <div class="d-flex justify-content-between">
-           <button class="button border-0 btn-wishlist d-flex justify-content-center align-items-center rounded shadow-sm " onclick="wishList(this)" aria-label="Add to wishlist">
-             <div class="btn__effect">
-                 <svg class="heart-stroke icon-svg icon-svg--size-4 icon-svg--color-silver" viewBox="20 18 29 28" aria-hidden="true" focusable="false">
-                     <path d="M28.3 21.1a4.3 4.3 0 0 1 4.1 2.6 2.5 2.5 0 0 0 2.3 1.7c1 0 1.7-.6 2.2-1.7a3.7 3.7 0 0 1 3.7-2.6c2.7 0 5.2 2.7 5.3 5.8.2 4-5.4 11.2-9.3 15a2.8 2.8 0 0 1-2 1 3.4 3.4 0 0 1-2.2-1c-9.6-10-9.4-13.2-9.3-15 0-1 .6-5.8 5.2-5.8m0-3c-5.3 0-7.9 4.3-8.2 8.5-.2 3.2.4 7.2 10.2 17.4a6.3 6.3 0 0 0 4.3 1.9 5.7 5.7 0 0 0 4.1-1.9c1.1-1 10.6-10.7 10.3-17.3-.2-4.6-4-8.6-8.4-8.6a7.6 7.6 0 0 0-6 2.7 8.1 8.1 0 0 0-6.2-2.7z">
-                     </path>
-                 </svg>
-                 <svg class="heart-full icon-svg icon-svg--size-4 icon-svg--color-blue" viewBox="0 0 19.2 18.5" aria-hidden="true" focusable="false">
-                     <path d="M9.66 18.48a4.23 4.23 0 0 1-2.89-1.22C.29 10.44-.12 7.79.02 5.67.21 2.87 1.95.03 5.42.01c1.61-.07 3.16.57 4.25 1.76A5.07 5.07 0 0 1 13.6 0c2.88 0 5.43 2.66 5.59 5.74.2 4.37-6.09 10.79-6.8 11.5-.71.77-1.7 1.21-2.74 1.23z">
-                     </path>
-                 </svg>
-                 <svg class="broken-heart" xmlns="http://www.w3.org/2000/svg" width="48" height="16" viewBox="5.707 17 48 16">
-                     <g fill="#A98F43">
-                         <path class="broken-heart--left" d="M29.865 32.735V18.703a4.562 4.562 0 0 0-3.567-1.476c-2.916.017-4.378 2.403-4.538 4.756-.118 1.781.227 4.006 5.672 9.737a3.544 3.544 0 0 0 2.428 1.025l-.008-.008.013-.002z"></path>
-                         <path class="broken-heart--right" d="M37.868 22.045c-.135-2.588-2.277-4.823-4.697-4.823a4.258 4.258 0 0 0-3.302 1.487l-.004-.003v14.035a3.215 3.215 0 0 0 2.289-1.033c.598-.596 5.882-5.99 5.714-9.663z"></path>
-                     </g>
-                     <path class="broken-heart--crack" fill="none" stroke="#FFF" stroke-miterlimit="10" d="M29.865 18.205v14.573"></path>
-                 </svg>
-                 <div class="effect-group">
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                 </div>
-             </div>
-           
-         </button>
-         <div class="badge-rate rounded-2 bg-white shadow-sm p-1">
-           <i class="fa-solid fa-star star text-warning"></i>
-           <span class="ms-2">4.8</span>
-         </div>
-          </div>
-           
-           <p class="card-text my-2">Some quick example</p>
-           <p class="card-text mb-3"><span class="price">100</span> LE</p>
-           <div class="d-flex addToCart gap-2">
-             <input class="d-inline-block px-2  rounded-2 " type="number" step="1" min="1" value="1">
-             <button class="w-100 btn btn-outline-primary">Add to cart</button>
-           </div>
-         </div>
-       </div>
-       <div class="card col-sm-5 border-0 shadow-sm ">
-        <div class="card-img-box p-2 m-2 bg-light">
-        <a href="#"> <img src="./images/products/بن-عبد-المعبود-اليمني-محوج-فاتح-200جم361.webp" class="card-img-top" alt="..."></a>
-        </div>
-         <div class="card-body pt-1">
-          <div class="d-flex justify-content-between">
-           <button class="button border-0 btn-wishlist d-flex justify-content-center align-items-center rounded shadow-sm " onclick="wishList(this)" aria-label="Add to wishlist">
-             <div class="btn__effect">
-                 <svg class="heart-stroke icon-svg icon-svg--size-4 icon-svg--color-silver" viewBox="20 18 29 28" aria-hidden="true" focusable="false">
-                     <path d="M28.3 21.1a4.3 4.3 0 0 1 4.1 2.6 2.5 2.5 0 0 0 2.3 1.7c1 0 1.7-.6 2.2-1.7a3.7 3.7 0 0 1 3.7-2.6c2.7 0 5.2 2.7 5.3 5.8.2 4-5.4 11.2-9.3 15a2.8 2.8 0 0 1-2 1 3.4 3.4 0 0 1-2.2-1c-9.6-10-9.4-13.2-9.3-15 0-1 .6-5.8 5.2-5.8m0-3c-5.3 0-7.9 4.3-8.2 8.5-.2 3.2.4 7.2 10.2 17.4a6.3 6.3 0 0 0 4.3 1.9 5.7 5.7 0 0 0 4.1-1.9c1.1-1 10.6-10.7 10.3-17.3-.2-4.6-4-8.6-8.4-8.6a7.6 7.6 0 0 0-6 2.7 8.1 8.1 0 0 0-6.2-2.7z">
-                     </path>
-                 </svg>
-                 <svg class="heart-full icon-svg icon-svg--size-4 icon-svg--color-blue" viewBox="0 0 19.2 18.5" aria-hidden="true" focusable="false">
-                     <path d="M9.66 18.48a4.23 4.23 0 0 1-2.89-1.22C.29 10.44-.12 7.79.02 5.67.21 2.87 1.95.03 5.42.01c1.61-.07 3.16.57 4.25 1.76A5.07 5.07 0 0 1 13.6 0c2.88 0 5.43 2.66 5.59 5.74.2 4.37-6.09 10.79-6.8 11.5-.71.77-1.7 1.21-2.74 1.23z">
-                     </path>
-                 </svg>
-                 <svg class="broken-heart" xmlns="http://www.w3.org/2000/svg" width="48" height="16" viewBox="5.707 17 48 16">
-                     <g fill="#A98F43">
-                         <path class="broken-heart--left" d="M29.865 32.735V18.703a4.562 4.562 0 0 0-3.567-1.476c-2.916.017-4.378 2.403-4.538 4.756-.118 1.781.227 4.006 5.672 9.737a3.544 3.544 0 0 0 2.428 1.025l-.008-.008.013-.002z"></path>
-                         <path class="broken-heart--right" d="M37.868 22.045c-.135-2.588-2.277-4.823-4.697-4.823a4.258 4.258 0 0 0-3.302 1.487l-.004-.003v14.035a3.215 3.215 0 0 0 2.289-1.033c.598-.596 5.882-5.99 5.714-9.663z"></path>
-                     </g>
-                     <path class="broken-heart--crack" fill="none" stroke="#FFF" stroke-miterlimit="10" d="M29.865 18.205v14.573"></path>
-                 </svg>
-                 <div class="effect-group">
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                 </div>
-             </div>
-           
-         </button>
-         <div class="badge-rate rounded-2 bg-white shadow-sm p-1">
-           <i class="fa-solid fa-star star text-warning"></i>
-           <span class="ms-2">4.8</span>
-         </div>
-          </div>
-           
-           <p class="card-text my-2">Some quick example</p>
-           <p class="card-text mb-3"><span class="price">100</span> LE</p>
-           <div class="d-flex addToCart gap-2">
-             <input class="d-inline-block px-2  rounded-2 " type="number" step="1" min="1" value="1">
-             <button class="w-100 btn btn-outline-primary">Add to cart</button>
-           </div>
-         </div>
-       </div>
-       <div class="card col-sm-5 border-0 shadow-sm ">
-        <div class="card-img-box p-2 m-2 bg-light">
-        <a href="#"> <img src="./images/products/دبوس-منظور-ملون-مادن160.webp" class="card-img-top" alt="..."></a>
-        </div>
-         <div class="card-body pt-1">
-          <div class="d-flex justify-content-between">
-           <button class="button border-0 btn-wishlist d-flex justify-content-center align-items-center rounded shadow-sm " onclick="wishList(this)" aria-label="Add to wishlist">
-             <div class="btn__effect">
-                 <svg class="heart-stroke icon-svg icon-svg--size-4 icon-svg--color-silver" viewBox="20 18 29 28" aria-hidden="true" focusable="false">
-                     <path d="M28.3 21.1a4.3 4.3 0 0 1 4.1 2.6 2.5 2.5 0 0 0 2.3 1.7c1 0 1.7-.6 2.2-1.7a3.7 3.7 0 0 1 3.7-2.6c2.7 0 5.2 2.7 5.3 5.8.2 4-5.4 11.2-9.3 15a2.8 2.8 0 0 1-2 1 3.4 3.4 0 0 1-2.2-1c-9.6-10-9.4-13.2-9.3-15 0-1 .6-5.8 5.2-5.8m0-3c-5.3 0-7.9 4.3-8.2 8.5-.2 3.2.4 7.2 10.2 17.4a6.3 6.3 0 0 0 4.3 1.9 5.7 5.7 0 0 0 4.1-1.9c1.1-1 10.6-10.7 10.3-17.3-.2-4.6-4-8.6-8.4-8.6a7.6 7.6 0 0 0-6 2.7 8.1 8.1 0 0 0-6.2-2.7z">
-                     </path>
-                 </svg>
-                 <svg class="heart-full icon-svg icon-svg--size-4 icon-svg--color-blue" viewBox="0 0 19.2 18.5" aria-hidden="true" focusable="false">
-                     <path d="M9.66 18.48a4.23 4.23 0 0 1-2.89-1.22C.29 10.44-.12 7.79.02 5.67.21 2.87 1.95.03 5.42.01c1.61-.07 3.16.57 4.25 1.76A5.07 5.07 0 0 1 13.6 0c2.88 0 5.43 2.66 5.59 5.74.2 4.37-6.09 10.79-6.8 11.5-.71.77-1.7 1.21-2.74 1.23z">
-                     </path>
-                 </svg>
-                 <svg class="broken-heart" xmlns="http://www.w3.org/2000/svg" width="48" height="16" viewBox="5.707 17 48 16">
-                     <g fill="#A98F43">
-                         <path class="broken-heart--left" d="M29.865 32.735V18.703a4.562 4.562 0 0 0-3.567-1.476c-2.916.017-4.378 2.403-4.538 4.756-.118 1.781.227 4.006 5.672 9.737a3.544 3.544 0 0 0 2.428 1.025l-.008-.008.013-.002z"></path>
-                         <path class="broken-heart--right" d="M37.868 22.045c-.135-2.588-2.277-4.823-4.697-4.823a4.258 4.258 0 0 0-3.302 1.487l-.004-.003v14.035a3.215 3.215 0 0 0 2.289-1.033c.598-.596 5.882-5.99 5.714-9.663z"></path>
-                     </g>
-                     <path class="broken-heart--crack" fill="none" stroke="#FFF" stroke-miterlimit="10" d="M29.865 18.205v14.573"></path>
-                 </svg>
-                 <div class="effect-group">
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                 </div>
-             </div>
-           
-         </button>
-         <div class="badge-rate rounded-2 bg-white shadow-sm p-1">
-           <i class="fa-solid fa-star star text-warning"></i>
-           <span class="ms-2">4.8</span>
-         </div>
-          </div>
-           
-           <p class="card-text my-2">Some quick example</p>
-           <p class="card-text mb-3"><span class="price">100</span> LE</p>
-           <div class="d-flex addToCart gap-2">
-             <input class="d-inline-block px-2  rounded-2 " type="number" step="1" min="1" value="1">
-             <button class="w-100 btn btn-outline-primary">Add to cart</button>
-           </div>
-         </div>
-       </div>
-       <div class="card col-sm-5 border-0 shadow-sm ">
-        <div class="card-img-box p-2 m-2 bg-light">
-        <a href="#"> <img src="./images/products/سكر-الضحي-1-كحم61.webp" class="card-img-top" alt="..."></a>
-        </div>
-         <div class="card-body pt-1">
-          <div class="d-flex justify-content-between">
-           <button class="button border-0 btn-wishlist d-flex justify-content-center align-items-center rounded shadow-sm " onclick="wishList(this)" aria-label="Add to wishlist">
-             <div class="btn__effect">
-                 <svg class="heart-stroke icon-svg icon-svg--size-4 icon-svg--color-silver" viewBox="20 18 29 28" aria-hidden="true" focusable="false">
-                     <path d="M28.3 21.1a4.3 4.3 0 0 1 4.1 2.6 2.5 2.5 0 0 0 2.3 1.7c1 0 1.7-.6 2.2-1.7a3.7 3.7 0 0 1 3.7-2.6c2.7 0 5.2 2.7 5.3 5.8.2 4-5.4 11.2-9.3 15a2.8 2.8 0 0 1-2 1 3.4 3.4 0 0 1-2.2-1c-9.6-10-9.4-13.2-9.3-15 0-1 .6-5.8 5.2-5.8m0-3c-5.3 0-7.9 4.3-8.2 8.5-.2 3.2.4 7.2 10.2 17.4a6.3 6.3 0 0 0 4.3 1.9 5.7 5.7 0 0 0 4.1-1.9c1.1-1 10.6-10.7 10.3-17.3-.2-4.6-4-8.6-8.4-8.6a7.6 7.6 0 0 0-6 2.7 8.1 8.1 0 0 0-6.2-2.7z">
-                     </path>
-                 </svg>
-                 <svg class="heart-full icon-svg icon-svg--size-4 icon-svg--color-blue" viewBox="0 0 19.2 18.5" aria-hidden="true" focusable="false">
-                     <path d="M9.66 18.48a4.23 4.23 0 0 1-2.89-1.22C.29 10.44-.12 7.79.02 5.67.21 2.87 1.95.03 5.42.01c1.61-.07 3.16.57 4.25 1.76A5.07 5.07 0 0 1 13.6 0c2.88 0 5.43 2.66 5.59 5.74.2 4.37-6.09 10.79-6.8 11.5-.71.77-1.7 1.21-2.74 1.23z">
-                     </path>
-                 </svg>
-                 <svg class="broken-heart" xmlns="http://www.w3.org/2000/svg" width="48" height="16" viewBox="5.707 17 48 16">
-                     <g fill="#A98F43">
-                         <path class="broken-heart--left" d="M29.865 32.735V18.703a4.562 4.562 0 0 0-3.567-1.476c-2.916.017-4.378 2.403-4.538 4.756-.118 1.781.227 4.006 5.672 9.737a3.544 3.544 0 0 0 2.428 1.025l-.008-.008.013-.002z"></path>
-                         <path class="broken-heart--right" d="M37.868 22.045c-.135-2.588-2.277-4.823-4.697-4.823a4.258 4.258 0 0 0-3.302 1.487l-.004-.003v14.035a3.215 3.215 0 0 0 2.289-1.033c.598-.596 5.882-5.99 5.714-9.663z"></path>
-                     </g>
-                     <path class="broken-heart--crack" fill="none" stroke="#FFF" stroke-miterlimit="10" d="M29.865 18.205v14.573"></path>
-                 </svg>
-                 <div class="effect-group">
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                 </div>
-             </div>
-           
-         </button>
-         <div class="badge-rate rounded-2 bg-white shadow-sm p-1">
-           <i class="fa-solid fa-star star text-warning"></i>
-           <span class="ms-2">4.8</span>
-         </div>
-          </div>
-           
-           <p class="card-text my-2">Some quick example</p>
-           <p class="card-text mb-3"><span class="price">100</span> LE</p>
-           <div class="d-flex addToCart gap-2">
-             <input class="d-inline-block px-2  rounded-2 " type="number" step="1" min="1" value="1">
-             <button class="w-100 btn btn-outline-primary">Add to cart</button>
-           </div>
-         </div>
-       </div>
-       <div class="card col-sm-5 border-0 shadow-sm ">
-        <div class="card-img-box p-2 m-2 bg-light">
-        <a href="#"> <img src="./images/products/عبوة-واحدة-من-نسكافيه-3-في-1،-عبوة-24-كيس302.webp" class="card-img-top" alt="..."></a>
-        </div>
-         <div class="card-body pt-1">
-          <div class="d-flex justify-content-between">
-           <button class="button border-0 btn-wishlist d-flex justify-content-center align-items-center rounded shadow-sm " onclick="wishList(this)" aria-label="Add to wishlist">
-             <div class="btn__effect">
-                 <svg class="heart-stroke icon-svg icon-svg--size-4 icon-svg--color-silver" viewBox="20 18 29 28" aria-hidden="true" focusable="false">
-                     <path d="M28.3 21.1a4.3 4.3 0 0 1 4.1 2.6 2.5 2.5 0 0 0 2.3 1.7c1 0 1.7-.6 2.2-1.7a3.7 3.7 0 0 1 3.7-2.6c2.7 0 5.2 2.7 5.3 5.8.2 4-5.4 11.2-9.3 15a2.8 2.8 0 0 1-2 1 3.4 3.4 0 0 1-2.2-1c-9.6-10-9.4-13.2-9.3-15 0-1 .6-5.8 5.2-5.8m0-3c-5.3 0-7.9 4.3-8.2 8.5-.2 3.2.4 7.2 10.2 17.4a6.3 6.3 0 0 0 4.3 1.9 5.7 5.7 0 0 0 4.1-1.9c1.1-1 10.6-10.7 10.3-17.3-.2-4.6-4-8.6-8.4-8.6a7.6 7.6 0 0 0-6 2.7 8.1 8.1 0 0 0-6.2-2.7z">
-                     </path>
-                 </svg>
-                 <svg class="heart-full icon-svg icon-svg--size-4 icon-svg--color-blue" viewBox="0 0 19.2 18.5" aria-hidden="true" focusable="false">
-                     <path d="M9.66 18.48a4.23 4.23 0 0 1-2.89-1.22C.29 10.44-.12 7.79.02 5.67.21 2.87 1.95.03 5.42.01c1.61-.07 3.16.57 4.25 1.76A5.07 5.07 0 0 1 13.6 0c2.88 0 5.43 2.66 5.59 5.74.2 4.37-6.09 10.79-6.8 11.5-.71.77-1.7 1.21-2.74 1.23z">
-                     </path>
-                 </svg>
-                 <svg class="broken-heart" xmlns="http://www.w3.org/2000/svg" width="48" height="16" viewBox="5.707 17 48 16">
-                     <g fill="#A98F43">
-                         <path class="broken-heart--left" d="M29.865 32.735V18.703a4.562 4.562 0 0 0-3.567-1.476c-2.916.017-4.378 2.403-4.538 4.756-.118 1.781.227 4.006 5.672 9.737a3.544 3.544 0 0 0 2.428 1.025l-.008-.008.013-.002z"></path>
-                         <path class="broken-heart--right" d="M37.868 22.045c-.135-2.588-2.277-4.823-4.697-4.823a4.258 4.258 0 0 0-3.302 1.487l-.004-.003v14.035a3.215 3.215 0 0 0 2.289-1.033c.598-.596 5.882-5.99 5.714-9.663z"></path>
-                     </g>
-                     <path class="broken-heart--crack" fill="none" stroke="#FFF" stroke-miterlimit="10" d="M29.865 18.205v14.573"></path>
-                 </svg>
-                 <div class="effect-group">
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                     <span class="effect"></span>
-                 </div>
-             </div>
-           
-         </button>
-         <div class="badge-rate rounded-2 bg-white shadow-sm p-1">
-           <i class="fa-solid fa-star star text-warning"></i>
-           <span class="ms-2">4.8</span>
-         </div>
-          </div>
-           
-           <p class="card-text my-2">Some quick example</p>
-           <p class="card-text mb-3"><span class="price">100</span> LE</p>
-           <div class="d-flex addToCart gap-2">
-             <input class="d-inline-block px-2  rounded-2 " type="number" step="1" min="1" value="1">
-             <button class="w-100 btn btn-outline-primary">Add to cart</button>
-           </div>
-         </div>
-       </div>
-      <div class="card col-sm-5 ">
-        <img src="./images/drinks -categoery.webp" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <div class="card col-sm-5 ">
-        <img src="./images/drinks -categoery.webp" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <div class="card col-sm-5 ">
-        <img src="./images/drinks -categoery.webp" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      
-    </div>
-</div>
+           </div></div>
   </section>
+  <script src="./js/nav.js"></script>
     <script src="./bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
     <script src="./fontawesome-free-6.7.2-web/js/all.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/addToCart.js"></script>
+    <script  src="./js/main.js"></script>
+    
   </body>
 </html>

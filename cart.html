@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./fontawesome-free-6.7.2-web/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC+Guides&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/togle_menu.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <title>My cart</title>
+
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="py-2  position-relative">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo rounded-3">
+                <img src="./images/logo-white.png" alt="LOGO" title="logo" />
+            </div>
+            <div class="nav-content col-8 d-flex gap-5 justify-content-end align-items-center  flex-column flex-sm-row p-2 d-none d-sm-flex">
+                <div class="links ">
+                    <ul class="d-flex m-0 fw-sm-bold flex-column flex-sm-row p-0 text-center">
+                        <li class="p-1 m-0 me-sm-2 border-bottom border-1"><a href="./index.html">Home</a></li>
+                        <li class="p-1 m-0 me-sm-2 border-bottom border-1">About</li>
+                        <li class="p-1 m-0 me-sm-2 border-bottom border-1">Contct us</li>
+                        <li class="p-1 m-0 me-sm-2 border-bottom border-1">Blog</li>
+                    </ul>
+                </div>
+                <div class="controls d-flex align-items-center">
+                    <div class="cart position-relative me-3">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <span class="orders-num position-absolute text-center text-white rounded-circle">4</span>
+                    </div>
+                    <span class="user text-secondary">Mohamed</span>
+                    <button class="btn btn-outline-danger  ms-4 btn-sm">
+                        Log out
+                    </button>
+                </div>
+          
+            </div>
+            <div class="togle-menu d-block d-sm-none text-danger ">
+                <button class="menu"
+                    onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+                    aria-label="Main Menu">
+                    <svg width="50" height="50" viewBox="0 0 100 100">
+                        <path class="line line1"
+                            d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                        <path class="line line2" d="M 20,50 H 80" />
+                        <path class="line line3"
+                            d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <section class="cart p-3">
+        <div class="section-header text-center mb-4">
+            <h3 class="fw-bold">My cart</h3>
+        </div>
+        <div class=" d-flex gap-3 flex-column flex-sm-row">
+            <!-- products in my cart -->
+          <div class="items w-100 ">
+            <!-- <div class="item  d-flex gap-3 p-3 mb-3 shadow-sm">
+                <div class="image"> <img class="w-100 h-100"
+                        src="./images/products/مناديل-بابيا-ورق-تواليت-3-طبقات-12...253.webp" alt="product-img"></div>
+                <div class="info">
+                    <div class="name fw-bold mb-2">Bapia Premium Moisturizing Tissues, Multi-Pack, 3 Layers</div>
+                    <div class="price fs-5"><span class="me-2">366</span>LE</div>
+                    <div class="quantity-controls d-flex rounded-2 overflow-hidden mt-3">
+                        <button class="decrese p-1 px-4 border-0 fw-bold text-white fs-5">-</button>
+                        <input class="quantity text-center p-2 border border-1" type="number" value="1">
+                        <button class="increse p-1 px-4 border-0 fw-bold text-white fs-5">+</button>
+                         
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <div class="item  d-flex justify-content-between align-items-center  p-3 mb-3 shadow-sm">
+                <div class="d-flex gap-3">
+                    <div class="image"> <img class="w-100 h-100"
+                        src="./images/products/b12ae351b4836e8644abd2c361f3d3fa.webp" alt="product-img"></div>
+                <div class="info">
+                    <div class="name fw-bold mb-2">Bapia Premium Moisturizing Tissues, Multi-Pack, 3 Layers</div>
+                    <div class="price fs-5"><span class="me-2">366</span>LE</div>
+                </div>
+                </div>
+                <div class="quantity-controls d-flex rounded-2 overflow-hidden">
+                    <button class="decrese p-1 px-4 border-0 fw-bold text-white fs-5">-</button>
+                    <input class="quantity text-center p-2 border border-1" type="number" value="1">
+                    <button class="increse p-1 px-4 border-0 fw-bold text-white fs-5">+</button>
+                     
+                    
+                </div>
+            </div>
+            <div class="item  d-flex gap-3 p-3 mb-3 shadow-sm">
+                <div class="image"> <img class="w-100 h-100"
+                        src="./images/products/بابيا-مناديل-سحب-عبوة-متعددة-3-طبقات-بريميوم-مرطبة...230.webp" alt="product-img"></div>
+                <div class="info">
+                    <div class="name fw-bold mb-2">Bapia Premium Moisturizing Tissues, Multi-Pack, 3 Layers</div>
+                    <div class="price fs-5"><span class="me-2">366</span>LE</div>
+                </div>
+            </div>
+            <div class="item  d-flex gap-3 p-3 mb-3 shadow-sm">
+                <div class="image"> <img class="w-100 h-100"
+                        src="./images/products/سكر-الضحي-1-كحم61.webp" alt="product-img"></div>
+                <div class="info">
+                    <div class="name fw-bold mb-2">Bapia Premium Moisturizing Tissues, Multi-Pack, 3 Layers</div>
+                    <div class="price fs-5"><span class="me-2">366</span>LE</div>
+                </div>
+            </div> -->
+          </div>
+          <!-- cart INFO to check out -->
+          <div class="cart-info p-3 col-12 col-md-3 col-lg-4 bg-light shadow-sm">
+            <h4>Order Summary</h4>
+            <div class="pb-3 border-bottom border-1 ">
+                <div class="d-flex justify-content-between mb-1"><span>sub-total</span> <div><span class="fw-bold sub-total">1000</span></div></div>
+<div class="d-flex justify-content-between mb-1"><span>discount</span> <div><span class="fw-bold discount">100</span></div></div>
+<div class="d-flex justify-content-between "><span>Shipping</span> <div><span class="fw-bold shipping">1100</span></div></div>
+            </div>
+            <div class="d-flex justify-content-between p-1 mt-2"><h4>Total</h4><div><span class="fw-bold total me-2">1000</span><span>LE</span></div></div>
+            <!-- <div><button class="btn btn-outline-danger w-100 mt-3">Clear cart</button></div>
+            <div class="text-center"><button class="btn btn-outline-primary w-100 mt-3">Continue shopping</button></div> -->
+            
+            <button class="btn btn-primary w-100 mt-3">Checkout</button>
+            <div class="notes">
+                <div>Cash on delivery</div>
+                
+             </div>
+          </div>
+          </div>
+
+          
+    </section> 
+    <script src="./js/nav.js"></script>
+    <script src="./js/cart.js"></script>
+</body>
+
+</html>

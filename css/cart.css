@@ -1,0 +1,63 @@
+.cart .item .image{
+    width: 100px;
+    height: 100px;
+}
+.cart .item .info{
+
+}
+
+.cart .item .info .name{
+    color: var(--main-color);
+    
+}
+.cart .item .info .price{
+    color: var(--second-color); 
+}
+.cart .item .quantity-controls{
+height: fit-content;
+}
+.cart .item .quantity-controls .increse{
+    background-color: rgba(28, 114, 176, 0.726);
+    transition: .3s;
+}
+.cart .item .quantity-controls .increse:hover{
+    background-color: rgba(28, 114, 176);
+}
+.cart .item .quantity-controls .decrese{
+    background-color: rgb(227 17 17 / 80%);
+    transition: .3s;
+}
+.cart .item .quantity-controls .decrese:hover{
+    background-color: rgb(202, 14, 14);
+}
+.cart .item .quantity-controls .quantity{
+    width: 60px;
+ outline: none;
+
+}
+/* Remove spinners for Chrome, Safari, Edge, Opera */
+.cart .item .quantity-controls .quantity::-webkit-inner-spin-button,
+.cart .item .quantity-controls .quantity::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Remove spinners for Firefox */
+.cart .item .quantity-controls .quantity {
+  -moz-appearance: textfield;
+}
+.cart .cart-info{
+    
+}
+.cart .cart-info .sub-total{
+    
+}
+.cart .cart-info .discount{
+    
+}
+.cart .cart-info .shipping{
+    
+}
+.cart .cart-info .notes{
+    color: var(--second-color);
+    font-size: 12px;
+}
