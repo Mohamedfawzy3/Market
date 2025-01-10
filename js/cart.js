@@ -1,6 +1,12 @@
-let items_box = document.querySelector(".cart .items");
+
 let cart;
+let invoiceSubTotalElement = document.querySelector(".sub-total");
+let invoiceDiscountElement = document.querySelector(".discount");
+let shippingElment=document.querySelector(".shipping");
+let totalElement = document.querySelector(".total");
+let subTotal = 0,shipping,discount,total;
 function fillmycart() {
+  let items_box = document.querySelector(".cart .items");
   cart = getmycartfromlocal();
   if (cart) {
     cart.forEach((element) => {
@@ -24,8 +30,7 @@ function fillmycart() {
        </div>
      </div>
      `;
-
-      console.log("lll");
+     handleInvoice()
     });
   } else {
     items_box.innerHTML = `<div  class="h-100 d-flex align-items-center justify-content-center border border-1">
@@ -33,48 +38,27 @@ function fillmycart() {
           </div>`;
   }
 }
-function getmycartfromlocal() {
-  if (localStorage.getItem("cart") == null) {
-    return null;
-  }
-  return JSON.parse(localStorage.getItem("cart"));
-}
-
 fillmycart();
 // handle quantity changes in my cart
 let increase_buttons =
-  document.querySelectorAll(".quantity-controls .increse") || null;
+  document.querySelectorAll(".quantity-controls .increse") ;
 let decrease_buttons =
-  document.querySelectorAll(".quantity-controls .decrese") || null;
+  document.querySelectorAll(".quantity-controls .decrese") ;
 let quantity_inputs =
-  document.querySelectorAll(".quantity-controls .quantity") || null;
-
+  document.querySelectorAll(".quantity-controls .quantity") ;
+  // increase quantity button
 increase_buttons?.forEach((button, index) => {
-  button.addEventListener("click", () => {
-    let quantity = parseInt(quantity_inputs[index].value);
-    quantity_inputs[index].value = quantity + 1;
-  });
+  controlQuantityButtonclick(button, index,"click", "++");
 });
+// decrease quantity button
 decrease_buttons?.forEach((button, index) => {
-  button.addEventListener("click", () => {
-    let quantity = parseInt(quantity_inputs[index].value);
-    if (quantity > 1) {
-      quantity_inputs[index].value = quantity - 1;
-    }
-  });
+  controlQuantityButtonclick(button, index,"click", "--");
 });
+// quantity input
 quantity_inputs?.forEach((input, index) => {
   // do cart=[] when it empty use getmycartfromlocal
-  input.addEventListener("change", () => {
-    console.log("inout", input);
-    let quantity = parseInt(input.value);
-    cart = getmycartfromlocal();
-    cart[index].quantity = quantity;
-    console.log("index", index);
-    localStorage.setItem("cart", JSON.stringify(cart));
-  });
+ controlQuantityButtonclick(input, index,"input", null);
 });
-
 // remove item from my cart
 let remove_buttons = document.querySelectorAll(".remove");
 remove_buttons.forEach((button, index) => {
@@ -84,3 +68,48 @@ remove_buttons.forEach((button, index) => {
     localStorage.setItem("cart", JSON.stringify(cart));
   });
 });
+function getmycartfromlocal() {
+  if (localStorage.getItem("cart") == null) {
+    return null;
+  }
+  return JSON.parse(localStorage.getItem("cart"));
+}
+function updateQuantity(element_index, updated_quantity) {
+  cart = getmycartfromlocal();
+  cart[element_index].quantity = updated_quantity;
+  localStorage.setItem("cart", JSON.stringify(cart));
+  handleInvoice()
+}
+// control quantity buttons
+function controlQuantityButtonclick(element, index,event, opertion) {
+  element.addEventListener(event, () => {
+    let quantity = parseInt(quantity_inputs[index].value);
+    if (opertion == "--" && quantity > 1) {
+      quantity_inputs[index].value = --quantity;
+    } else if (opertion == "++") {
+      quantity_inputs[index].value = ++quantity;
+    }
+    // handle quantity input value must be greater than 0
+    if(parseInt(element.value)<1){
+   quantity= element.value=1
+    }
+    updateQuantity(index, quantity);
+
+  });
+}
+// calc total price
+function handleInvoice() {
+subTotal=0
+  cart?.forEach((product) => {
+    subTotal += product.price * (product.quantity||1);
+   
+  });
+  discount = subTotal * 0.05;
+  shipping = Math.max( subTotal * 0.2,30);
+  total = subTotal - discount + shipping
+
+  invoiceSubTotalElement.innerHTML = subTotal.toFixed(2)
+  invoiceDiscountElement.innerHTML = discount.toFixed(2)
+  shippingElment.innerHTML = shipping.toFixed(2)
+  totalElement.innerHTML = total.toFixed(2)
+}

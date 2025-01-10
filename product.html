@@ -74,8 +74,10 @@
   </nav>
     <!-- main content -->
     <main class="py-3">
+      <!-- product details -->
       <div class="product-in-details container">
         <div class="row">
+          <!-- product images -->
           <div class="col-12 col-md-6 col-lg-5 d-flex gap-3 product-images ">
             <div class="sub-images ">
                 <div class="mb-2 active-img">
@@ -109,12 +111,10 @@
             </div>
           
           </div>
-          <div class="col-12 col-md-6 col-lg-7 description">
+          <!-- product info -->
+          <div class="product col-12 col-md-6 col-lg-7 description">
             <h4 class="product-name mb-4 text-primary ">
-              
                 <span>></span>Bapia Premium Moisturizing Tissues, Multi-Pack, 3 Layers
-             
-             
             </h4>
             <div class="d-flex gap-5 align-items-center mb-3">
               <div class="fs-4"><span class="price me-2  fw-bold">200</span><span>LE</span> <span class="muted-price text-muted text-decoration-line-through ms-3">233</span></div>
@@ -126,13 +126,13 @@
 
             <div class="d-flex addToCart gap-2">
               <input
-                class="d-inline-block px-2 rounded-2"
+                class="quantity d-inline-block px-2 rounded-2"
                 type="number"
                 step="1"
                 min="1"
                 value="1"
               />
-              <button class="btn btn-outline-primary">Add to cart</button>
+              <button class="add_btn btn btn-outline-primary">Add to cart</button>
 
               <div class="badge-rate rounded-2 bg-white shadow-sm p-1">
                 <button
@@ -212,6 +212,7 @@
     <script src="./bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
     <script src="./fontawesome-free-6.7.2-web/js/all.min.js"></script>
     <script src="./js/nav.js"></script>
-    <script  src="./js/product_details.js"></script>
+    <script type="module" src="./js/product_details.js"></script>
+
   </body>
 </html>
