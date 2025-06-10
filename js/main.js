@@ -471,7 +471,7 @@
  
   
 ];
-const orders_number = document.querySelector(".orders-num");
+
 // =>>>>>>>>>>slider
 let sliderImages = [
   "./images/slider1.jpg",
@@ -619,12 +619,8 @@ function go_to_product_details(el) {
   localStorage.setItem("product_id", product_id);
   window.location.href = "product.html";
 }
-// get and update the orders number in the nav
-function handle_orders_number() {
-  orders_number.innerHTML = JSON.parse(localStorage.getItem("cart")).length;
-  console.log("exported")
-}
-handle_orders_number();
+
+
 // scroll top button
 
 const scrollTopButton = document.getElementById('scrollTopButton');

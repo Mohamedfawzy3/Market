@@ -12,11 +12,14 @@
   height: 270px;
   max-width: 100%;
 }
-.product_details_page .product-images .sub-images {
+.product_details_page .product-images .sub-images img {
+  
+  
 }
 
 .product_details_page .product-images .sub-images div {
   width: 95px;
+  height: 95px;
   border: 1px solid #ddd;
   padding: 5px;
 }

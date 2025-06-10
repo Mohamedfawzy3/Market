@@ -22,6 +22,8 @@ function get_product_details() {
     product.rating;
   document.querySelector(".product-in-details .main-image img").src =
     product.image;
+    document.querySelector(".product-in-details .sub-images img").src =
+    product.image;
 }
 get_product_details();
 document.querySelector(".product .add_btn").addEventListener("click", (el) => {
